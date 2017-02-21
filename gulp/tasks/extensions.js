@@ -9,7 +9,7 @@ config = require('../config');
 
 gulp.task('toggle', function(){
   gulp.src(config.main.src + '/sass/required/required.sass')
-    .pipe(replace('// (`ㅅ`)づ other imports\n', '// (`ㅅ`)づ other imports\n\n@import required/toggle'))
+    .pipe(replace('// (`ㅅ`)づ optional imports\n', '// (`ㅅ`)づ optional imports\n\n@import required/toggle'))
     .pipe(gulp.dest(config.main.src + '/sass/required'));
 });
 
@@ -23,7 +23,7 @@ gulp.task('no-toggle', function(){
 
 gulp.task('patterns', function(){
   gulp.src(config.main.src + '/sass/required/required.sass')
-    .pipe(replace('// (`ㅅ`)づ other imports\n', '// (`ㅅ`)づ other imports\n\n@import required/patterns'))
+    .pipe(replace('// (`ㅅ`)づ optional imports\n', '// (`ㅅ`)づ optional imports\n\n@import required/patterns'))
     .pipe(gulp.dest(config.main.src + '/sass/required'));
 });
 
@@ -37,7 +37,7 @@ gulp.task('no-patterns', function(){
 
 gulp.task('filters', function(){
   gulp.src(config.main.src + '/sass/required/required.sass')
-    .pipe(replace('// (`ㅅ`)づ other imports\n', '// (`ㅅ`)づ other imports\n\n@import required/filters'))
+    .pipe(replace('// (`ㅅ`)づ optional imports\n', '// (`ㅅ`)づ optional imports\n\n@import required/filters'))
     .pipe(gulp.dest(config.main.src + '/sass/required'));
 });
 
@@ -51,7 +51,7 @@ gulp.task('no-filters', function(){
 
 gulp.task('loaders', function(){
   gulp.src(config.main.src + '/sass/required/required.sass')
-    .pipe(replace('// (`ㅅ`)づ other imports\n', '// (`ㅅ`)づ other imports\n\n@import vendors/SpinThatShit/loaders.scss'))
+    .pipe(replace('// (`ㅅ`)づ optional imports\n', '// (`ㅅ`)づ optional imports\n\n@import vendors/SpinThatShit/loaders.scss'))
     .pipe(gulp.dest(config.main.src + '/sass/required'));
 });
 
@@ -65,7 +65,7 @@ gulp.task('no-loaders', function(){
 
 gulp.task('animate', function(){
   gulp.src(config.main.src + '/sass/required/required.sass')
-    .pipe(replace('// (`ㅅ`)づ other imports\n', '// (`ㅅ`)づ other imports\n\n@import ./bower_components/animatewithsass/animate.scss'))
+    .pipe(replace('// (`ㅅ`)づ optional imports\n', '// (`ㅅ`)づ optional imports\n\n@import ./bower_components/animatewithsass/animate.scss'))
     .pipe(gulp.dest(config.main.src + '/sass/required'));
 });
 
@@ -132,7 +132,7 @@ gulp.task('no-chosencss', function(){
 
 gulp.task('chosencssfix', function(){
   gulp.src(config.main.src + '/sass/required/required.sass')
-    .pipe(replace('// (`ㅅ`)づ other imports\n', '// (`ㅅ`)づ other imports\n\n@import optional/chosen'))
+    .pipe(replace('// (`ㅅ`)づ optional imports\n', '// (`ㅅ`)づ optional imports\n\n@import optional/chosen'))
     .pipe(gulp.dest(config.main.src + '/sass/required'));
 });
 

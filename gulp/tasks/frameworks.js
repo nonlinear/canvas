@@ -21,7 +21,7 @@ gulp.task('no-bootcss', function(){
 
 gulp.task('bootcssfix', function(){
   gulp.src(config.main.src + '/sass/required/required.sass')
-    .pipe(replace('// (`ㅅ`)づ other imports\n', '// (`ㅅ`)づ other imports\n\n@import optional/bootstrap'))
+    .pipe(replace('// (`ㅅ`)づ optional imports\n', '// (`ㅅ`)づ optional imports\n\n@import optional/bootstrap'))
     .pipe(gulp.dest(config.main.src + '/sass/required'));
 });
 
