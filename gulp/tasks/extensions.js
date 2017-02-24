@@ -9,13 +9,13 @@ config = require('../config');
 
 gulp.task('toggle', function(){
   gulp.src(config.main.src + '/sass/required/required.sass')
-    .pipe(replace('// (`ㅅ`)づ optional imports\n', '// (`ㅅ`)づ optional imports\n\n@import required/toggle'))
+    .pipe(replace('// (`ㅅ`)づ optional imports\n', '// (`ㅅ`)づ optional imports\n\n@import optional/toggle'))
     .pipe(gulp.dest(config.main.src + '/sass/required'));
 });
 
 gulp.task('no-toggle', function(){
   gulp.src(config.main.src + '/sass/required/required.sass')
-    .pipe(replace('\n@import required/toggle', ''))
+    .pipe(replace('\n@import optional/toggle', ''))
     .pipe(gulp.dest(config.main.src + '/sass/required'));
 });
 
@@ -61,15 +61,15 @@ gulp.task('no-loaders', function(){
     .pipe(gulp.dest(config.main.src + '/sass/required'));
 });
 
-// (`ㅅ`)づ animate rules
+// (`ㅅ`)づ animation rules
 
-gulp.task('animate', function(){
+gulp.task('animation', function(){
   gulp.src(config.main.src + '/sass/required/required.sass')
     .pipe(replace('// (`ㅅ`)づ optional imports\n', '// (`ㅅ`)づ optional imports\n\n@import ./bower_components/animatewithsass/animate.scss'))
     .pipe(gulp.dest(config.main.src + '/sass/required'));
 });
 
-gulp.task('no-animate', function(){
+gulp.task('no-animation', function(){
   gulp.src(config.main.src + '/sass/required/required.sass')
     .pipe(replace('\n@import ./bower_components/animatewithsass/animate.scss', ''))
     .pipe(gulp.dest(config.main.src + '/sass/required'));

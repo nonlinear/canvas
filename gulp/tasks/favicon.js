@@ -6,6 +6,29 @@ runSequence = require('run-sequence'),
 config = require('../config'),
 FAVICON_DATA_FILE = config.main.src + 'favicon/faviconData.json';
 
+// gulp.task("favicons", function () {
+//     return gulp.src("favicon.png").pipe(favicons({
+//         appName: "My App",
+//         appDescription: "This is my application",
+//         developerName: "Hayden Bleasel",
+//         developerURL: "http://haydenbleasel.com/",
+//         background: "#020307",
+//         path: "app/favicons/",
+//         url: "http://haydenbleasel.com/",
+//         display: "standalone",
+//         orientation: "portrait",
+//         start_url: "/?homescreen=1",
+//         version: 1.0,
+//         logging: false,
+//         online: false,
+//         html: "index.html",
+//         pipeHTML: true,
+//         replace: true
+//     }))
+//     .on("error", gutil.log)
+//     .pipe(gulp.dest("./"));
+// });
+
 gulp.task('favicon0', function(done) {
   var currentVersion = JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).version;
   realFavicon.checkForUpdates(currentVersion, function(err) {
