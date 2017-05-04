@@ -1,7 +1,8 @@
 var config = {
   main: {
     src: './app/',
-    dest: './dist/'
+    dest: './dist/',
+    bower: './bower_components/'
   },
   sass: {
     src: 'sass/style.sass',

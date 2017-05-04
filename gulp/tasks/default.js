@@ -7,7 +7,7 @@ gulp.task('default', function(callback) {
   runSequence(
     'clean',
     'imagemin',
-    ['svgfile', 'font', 'js', 'json'],
+    ['svgfile', 'dataloops', 'font', 'js', 'json'],
     ['readme', 'sass', 'nunjucks'],
     ['browserSync', 'watch'],
     callback
