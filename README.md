@@ -1,3 +1,3 @@
-- [check requirements](https://github.com/umbrella-org/gulp/wiki/requirements)
-- [follow installation](https://github.com/umbrella-org/gulp/wiki/installation)
-- [visit page](https://umbrella-org.github.io/gulp)
+- [check requirements](https://github.com/nonlinear/canvas/wiki/requirements)
+- [follow installation](https://github.com/nonlinear/canvas/wiki/installation)
+- [visit page](https://nonlinear.github.io/canvas)
